@@ -1,0 +1,22 @@
+import java.util.HashMap;  // Importing the HashMap class
+
+public class Main {
+    public static void main(String[] args) {
+        // Step 1: Define the input array
+        int[] arr = {1, 2, 3, 2, 1, 1, 4, 5};
+        
+        // Step 2: Create a HashMap to store frequencies of elements
+        HashMap<Integer, Integer> hp = new HashMap<>();
+        
+        // Step 3: Loop through each element of the array and count frequencies
+        for (int num : arr) {
+            hp.put(num, hp.getOrDefault(num, 0) + 1);
+        }
+        
+        // Step 4: Print the frequencies of each element
+        System.out.println("Frequencies of elements in the array:");
+        for (int key : hp.keySet()) {
+            System.out.println(key + ": " + hp.get(key));
+        }
+    }
+}
